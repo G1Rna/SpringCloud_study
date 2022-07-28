@@ -24,7 +24,6 @@ eureka:
       defaultZone: http://eureka7001:7001/eureka/,http://eureka7002:7002/eureka/,http://eureka7003:7003/eureka/
   instance:
     instance-id: springcloud-provider-dept8001 #修改eureka上的默认描述信息
-
 info:
   app.name: G1RnaSpringCloud
   company.name: ggg.gg.g.com

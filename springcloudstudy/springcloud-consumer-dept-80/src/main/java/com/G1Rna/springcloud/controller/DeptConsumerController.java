@@ -10,10 +10,18 @@ import java.util.List;
 @RestController
 public class DeptConsumerController {
 //消费者不应该有service层
+
+
+
+
     @Autowired
     private RestTemplate restTemplate;
-
-    private static final String REST_URL_PERFIX = "http://localhost:8001";
+    /**
+     * 服务提供方地址前缀
+     */
+//        private static final String REST_URL_PERFIX = "http://localhost:8001";
+    //Ribbon:我们这里的地址，应该是一个变量，通过服务名来访问
+    private static final String REST_URL_PERFIX = "http://SPRINGCLOUD-PROVIDER-DEPT";
 
     @RequestMapping("consumer/dept/add")
     public boolean addDpet(Dept dept){
